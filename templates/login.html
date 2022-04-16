@@ -1,0 +1,16 @@
+<h1>Login</h1>
+
+{% with messages = get_flashed_messages(with_categories=false) %}
+{% if messages %}
+{% for message in messages %}
+<p>{{ message}}</p>
+{% endfor %}
+{% endif %}
+{% endwith %}
+
+<form method="post">
+    <input type="email" name="email" id="email" autocomplete="email" placeholder="email">
+    <input type="password" name="pwrd" id="pwrd" autocomplete="current-password" placeholder="password">
+
+    <button type="submit">Login</button>
+</form>
